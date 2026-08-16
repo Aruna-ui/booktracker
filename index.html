@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="BookBloom — a gothic library book tracker and review journal.">
+  <title>BookBloom — Gothic Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark">✦</span><div><strong>BookBloom</strong><small>Gothic Library</small></div></div>
+    <nav><a href="#library">Library</a><a href="#review">Review</a><a href="#about">About</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE SCRIPTORIUM AWAITS</p>
+        <h1>Stories bloom<br><em>in the shadows.</em></h1>
+        <p class="lead">Search the world's books, capture their covers, and keep your own enchanted reading journal.</p>
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="Enter a book title…" autocomplete="off">
+          <button id="searchBtn" class="gold-btn">🔎 Find &amp; Capture</button>
+        </div>
+        <p id="status" class="status">Try a title such as <button class="text-btn" data-demo="Dracula">Dracula</button> or <button class="text-btn" data-demo="The Hobbit">The Hobbit</button>.</p>
+      </div>
+      <div class="hero-seal">✦<span>READ<br>BEYOND<br>THE DARK</span>✦</div>
+    </section>
+
+    <section id="library" class="section">
+      <div class="section-heading"><div><p class="eyebrow">YOUR SHELVES</p><h2>Captured Books</h2></div><span id="count" class="count">0 books</span></div>
+      <div id="books" class="books-grid"></div>
+      <div id="empty" class="empty"><div class="empty-icon">♜</div><h3>The shelves are waiting.</h3><p>Search for a book above and capture it into your gothic library.</p></div>
+    </section>
+
+    <section id="review" class="section review-section">
+      <div class="section-heading"><div><p class="eyebrow">THE READER'S QUILL</p><h2>Write a Review</h2></div></div>
+      <form id="reviewForm" class="review-form">
+        <label>Book<select id="reviewBook" required><option value="">Choose a captured book…</option></select></label>
+        <label>Rating<select id="rating" required><option value="">Select stars…</option><option value="5">★★★★★ — Masterpiece</option><option value="4">★★★★☆ — Excellent</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Fair</option><option value="1">★☆☆☆☆ — Not for me</option></select></label>
+        <label class="full">Your review<textarea id="reviewText" rows="5" placeholder="Write what the book whispered to you…" required></textarea></label>
+        <button class="gold-btn" type="submit">✒ Seal Review</button>
+      </form>
+    </section>
+
+    <section id="about" class="about-card"><div class="about-symbol">❦</div><div><p class="eyebrow">BOOKBLOOM</p><h2>A private corner for curious readers.</h2><p>BookBloom searches Google Books first and falls back to Open Library when needed. Captured books and reviews are stored in your browser, so your reading journal stays on this device.</p></div></section>
+  </main>
+
+  <footer><span>✦ BookBloom</span><span>Where every shelf has a secret.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
